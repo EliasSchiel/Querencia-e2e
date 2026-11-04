@@ -1,7 +1,8 @@
 # Querencia E2E
 
-[![Smoke diario en producción](https://github.com/TU_USUARIO/querencia-e2e/actions/workflows/smoke-diario.yml/badge.svg)](https://github.com/TU_USUARIO/querencia-e2e/actions/workflows/smoke-diario.yml)
-[![Reporte Allure](https://img.shields.io/badge/reporte-Allure-orange)](https://TU_USUARIO.github.io/querencia-e2e/)
+[![Smoke diario en producción](https://github.com/EliasSchiel/Querencia-e2e/actions/workflows/smoke-diario.yml/badge.svg)](https://eliasschiel.github.io/Querencia-e2e/)
+[![Reporte Allure](https://img.shields.io/badge/reporte-Allure-orange)](https://eliasschiel.github.io/Querencia-e2e/)
+[![Ejecuciones](https://img.shields.io/badge/ejecuciones-GitHub%20Actions-2E4A3B)](https://github.com/EliasSchiel/Querencia-e2e/actions/workflows/smoke-diario.yml)
 
 Pruebas end-to-end de **[Querencia](https://proyecto-querencia.runasp.net)**, una plataforma de adopción responsable de mascotas
 (ASP.NET Core MVC + SQL Server). La suite prueba la aplicación desde afuera, como lo haría una persona con el navegador.
@@ -59,7 +60,7 @@ La regresión necesita Querencia en modo **Development** (crea los usuarios de p
 ### Reportes
 
 - **Cucumber HTML:** `target/cucumber-report.html` (se abre con el navegador).
-- **Allure:** `allure serve target/allure-results` (requiere [Allure](https://allurereport.org/docs/install/)), o el reporte publicado en GitHub Pages.
+- **Allure:** `allure serve target/allure-results` (requiere [Allure](https://allurereport.org/docs/install/)), o el [reporte publicado en GitHub Pages](https://eliasschiel.github.io/Querencia-e2e/).
 - Si un paso falla, se adjunta una **captura de pantalla** y la URL al reporte.
 
 ## Integración continua
