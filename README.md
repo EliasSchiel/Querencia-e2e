@@ -16,10 +16,14 @@ Los escenarios se separan con etiquetas de Cucumber:
 | Etiqueta | Contra qué corre | Qué hace |
 | --- | --- | --- |
 | `@smoke` | Producción | **Solo lectura.** Carga de páginas, navegación, filtros, fichas, seguridad (páginas privadas, robots.txt, sitemap, https), versión celular y login. Corre todos los días en GitHub Actions. |
-| `@regresion` | Querencia local con datos de prueba | **Flujos completos que crean datos:** registro, roles, adopción de punta a punta, límite de colectas con rendición de comprobantes y denuncias. |
+| `@regresion` | Entorno privado de pruebas | **Flujos completos que crean datos:** registro, roles, adopción de punta a punta, límite de colectas con rendición de comprobantes y denuncias. |
 
 Por seguridad, los escenarios `@regresion` **no se ejecutan contra producción** aunque se olviden las etiquetas
 (ver `hooks/Hooks.java`): crean cuentas, mascotas y denuncias.
+
+> **Sobre el código de Querencia:** este repositorio contiene solo las pruebas. El código de la aplicación es privado,
+> así que los escenarios `@regresion` los ejecuta el autor en su entorno de pruebas antes de cada publicación.
+> Los escenarios `@smoke` sí se pueden correr desde cualquier lugar, porque solo leen el sitio público.
 
 ## Cobertura
 
@@ -39,23 +43,19 @@ Por seguridad, los escenarios `@regresion` **no se ejecutan contra producción**
 - El botón flotante del asistente tapaba los enlaces «Términos» y «Privacidad» del pie: no se podía hacer clic.
 - En el celular, la ficha de una mascota se desbordaba 12 px hacia los costados (gutter de Bootstrap más ancho que el padding del contenedor).
 
-## Cómo correrla
+## Cómo correr el smoke
 
 Requisitos: Java 17, Maven y Google Chrome (Selenium Manager descarga el driver solo).
 
 ```bash
-# Smoke contra producción (no modifica nada)
+# Solo lectura contra el sitio publicado: no crea ni modifica nada
 mvn test -Dbaseurl=https://proyecto-querencia.runasp.net -Dcucumber.filter.tags=@smoke
 
-# Regresión completa contra Querencia en tu PC (F5 en Visual Studio, perfil https o http)
-mvn test -Dbaseurl=http://localhost:5180 -Dcucumber.filter.tags=@regresion
-
-# Todo, con el navegador oculto
-mvn test -Dheadless=true
+# Lo mismo con el navegador oculto
+mvn test -Dbaseurl=https://proyecto-querencia.runasp.net -Dcucumber.filter.tags=@smoke -Dheadless=true
 ```
 
 Opciones: `-Dbrowser=chrome|edge|firefox`, `-Dheadless=true`, `-Dbaseurl=...`.
-La regresión necesita Querencia en modo **Development** (crea los usuarios de prueba y no limita los pedidos).
 
 ### Reportes
 
