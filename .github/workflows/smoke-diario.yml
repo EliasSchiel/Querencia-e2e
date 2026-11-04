@@ -1,0 +1,107 @@
+# Corre los escenarios @smoke (solo lectura) contra Querencia en producción todos los días,
+# genera el reporte de Allure con el historial de las corridas anteriores y lo publica en GitHub Pages.
+name: Smoke diario en producción
+
+on:
+  schedule:
+    - cron: "0 12 * * *"      # todos los días a las 9:00 de Argentina (12:00 UTC)
+  workflow_dispatch:           # botón «Run workflow» para correrlo a mano
+  push:
+    branches: [main]
+
+permissions:
+  contents: write              # para publicar el reporte en la rama gh-pages
+
+concurrency:
+  group: smoke-produccion
+  cancel-in-progress: false
+
+env:
+  BASE_URL: https://proyecto-querencia.runasp.net
+  REPORTE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+
+jobs:
+  smoke:
+    name: "@smoke contra producción"
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v4
+
+      - name: Instalar Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+
+      - name: Ejecutar los escenarios @smoke
+        env:
+          QUERENCIA_TEST_EMAIL: ${{ secrets.QUERENCIA_TEST_EMAIL }}
+          QUERENCIA_TEST_PASSWORD: ${{ secrets.QUERENCIA_TEST_PASSWORD }}
+        run: >
+          mvn -B test
+          -Dbaseurl=${{ env.BASE_URL }}
+          -Dheadless=true
+          -Dcucumber.filter.tags=@smoke
+          -DtestFailureIgnore=true
+
+      # ---- Reporte de Allure con historial ----------------------------------------------
+
+      - name: Traer el historial del último reporte
+        if: always()
+        continue-on-error: true      # la primera vez todavía no existe la rama gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Generar el reporte de Allure
+        if: always()
+        run: |
+          mkdir -p target/allure-results
+          if [ -d gh-pages/history ]; then cp -r gh-pages/history target/allure-results/history; fi
+          cat > target/allure-results/environment.properties <<PROPS
+          Sitio=${BASE_URL}
+          Navegador=Chrome headless (ubuntu-latest)
+          Etiquetas=@smoke
+          PROPS
+          cat > target/allure-results/executor.json <<JSON
+          {"name":"GitHub Actions","type":"github","buildName":"Smoke #${{ github.run_number }}",
+           "buildOrder":${{ github.run_number }},
+           "buildUrl":"${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}",
+           "reportUrl":"${REPORTE_URL}"}
+          JSON
+          npx --yes allure-commandline@2.34.1 generate target/allure-results --clean -o allure-report
+
+      - name: Publicar el reporte en GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-report
+          commit_message: "Reporte Allure · smoke #${{ github.run_number }}"
+
+      - name: Guardar los reportes como artefacto
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reportes-smoke-${{ github.run_number }}
+          path: |
+            target/cucumber-report.html
+            target/surefire-reports/
+          retention-days: 14
+
+      # Como los tests corren con testFailureIgnore (para que siempre se genere el reporte),
+      # este paso marca el run en rojo si algún escenario falló. Así GitHub manda el aviso por mail.
+      - name: Verificar el resultado
+        if: always()
+        run: |
+          if grep -qE '<(failure|error)' target/surefire-reports/TEST-*.xml; then
+            echo "::error::Hay escenarios @smoke fallidos. Revisá el reporte: ${REPORTE_URL}"
+            exit 1
+          fi
+          echo "Todos los escenarios @smoke pasaron."

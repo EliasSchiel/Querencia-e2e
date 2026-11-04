@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ar.querencia</groupId>
+    <artifactId>querencia-e2e</artifactId>
+    <version>1.0.0</version>
+    <name>Querencia E2E</name>
+    <description>Pruebas end-to-end de Querencia (https://proyecto-querencia.runasp.net) con Selenium, Cucumber y Allure</description>
+
+    <properties>
+        <!-- Java -->
+        <maven.compiler.release>17</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Versiones -->
+        <selenium.version>4.35.0</selenium.version>
+        <cucumber.version>7.27.2</cucumber.version>
+        <junit.jupiter.version>5.13.4</junit.jupiter.version>
+        <junit.platform.version>1.13.4</junit.platform.version>
+        <allure.version>2.33.0</allure.version>
+        <surefire.version>3.5.3</surefire.version>
+        <compiler.version>3.15.0</compiler.version>
+
+        <!--
+            Configuración de la suite. Vacía = se usa la variable de entorno (BASE_URL, BROWSER, HEADLESS)
+            o el valor por defecto de utils/Config.java (http://localhost:5180, chrome, con ventana).
+            Ejemplo: mvn test -Dbaseurl=https://proyecto-querencia.runasp.net -Dcucumber.filter.tags=@smoke
+        -->
+        <baseurl></baseurl>
+        <browser></browser>
+        <headless></headless>
+        <testFailureIgnore>false</testFailureIgnore>
+        <cucumber.plugin>pretty, html:target/cucumber-report.html, json:target/cucumber-report.json</cucumber.plugin>
+    </properties>
+
+    <dependencies>
+        <!-- SELENIUM: automatiza el navegador. -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+
+        <!-- CUCUMBER: escenarios en Gherkin (en español) y anotaciones @Dado, @Cuando, @Entonces. -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- CUCUMBER + JUNIT PLATFORM: ejecuta Cucumber con JUnit 5. -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit-platform-engine</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JUNIT 5: assertions y assumptions. -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JUNIT PLATFORM SUITE: el runner con @Suite. -->
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-suite</artifactId>
+            <version>${junit.platform.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <!--
+            ALLURE: genera los resultados para el reporte (target/allure-results).
+            Está activo siempre. Se puede apagar con -P !allure si no hay conexión para descargarlo.
+        -->
+        <profile>
+            <id>allure</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>io.qameta.allure</groupId>
+                    <artifactId>allure-cucumber7-jvm</artifactId>
+                    <version>${allure.version}</version>
+                    <scope>test</scope>
+                </dependency>
+            </dependencies>
+            <properties>
+                <cucumber.plugin>pretty, html:target/cucumber-report.html, json:target/cucumber-report.json, io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm</cucumber.plugin>
+            </properties>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${compiler.version}</version>
+            </plugin>
+
+            <!--
+                SUREFIRE: ejecuta los tests con "mvn test".
+                Pasa la configuración de la suite como propiedades del sistema.
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire.version}</version>
+                <configuration>
+                    <systemPropertyVariables>
+                        <baseurl>${baseurl}</baseurl>
+                        <browser>${browser}</browser>
+                        <headless>${headless}</headless>
+                        <cucumber.plugin>${cucumber.plugin}</cucumber.plugin>
+                        <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
+                    </systemPropertyVariables>
+                    <!-- Que un escenario fallido no corte el build antes de generar el reporte en CI. -->
+                    <testFailureIgnore>${testFailureIgnore}</testFailureIgnore>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
