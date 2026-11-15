@@ -1,100 +1,100 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"  Como visitante de Querencia
-  Quiero recorrer las secciones principales sin iniciar sesión
-  Para conocer a las mascotas y a las asociaciones","2058","El menú principal lleva a cada sección","","Sat Nov 14 17:42:23 UTC 2026","passed","Sat Nov 14 17:42:25 UTC 2026","","Navegación pública","El menú principal lleva a cada sección",""
-"  Como visitante de Querencia
-  Quiero recorrer las secciones principales sin iniciar sesión
-  Para conocer a las mascotas y a las asociaciones","1655","La página de inicio carga con la portada y las mascotas recientes","","Sat Nov 14 17:42:19 UTC 2026","passed","Sat Nov 14 17:42:21 UTC 2026","","Navegación pública","La página de inicio carga con la portada y las mascotas recientes",""
-"  Como responsable de Querencia
-  Quiero que las páginas privadas pidan iniciar sesión
-  Para proteger los datos de las personas y las asociaciones","1154","Las páginas privadas piden iniciar sesión","","Sat Nov 14 17:42:41 UTC 2026","passed","Sat Nov 14 17:42:43 UTC 2026","","Seguridad y acceso","Las páginas privadas piden iniciar sesión",""
-"  Como responsable de Querencia
-  Quiero que las páginas privadas pidan iniciar sesión
-  Para proteger los datos de las personas y las asociaciones","1558","El sitio publicado redirige de http a https","","Sat Nov 14 17:42:50 UTC 2026","passed","Sat Nov 14 17:42:52 UTC 2026","","Seguridad y acceso","El sitio publicado redirige de http a https",""
-"  Como persona que quiere adoptar o ayudar
-  Quiero filtrar las publicaciones
-  Para encontrar rápido a la mascota que busco","1738","Buscar un nombre que no existe muestra el aviso sin resultados","","Sat Nov 14 17:42:04 UTC 2026","passed","Sat Nov 14 17:42:06 UTC 2026","","Búsqueda de mascotas","Buscar un nombre que no existe muestra el aviso sin resultados",""
-"  Como persona que quiere adoptar o ayudar
-  Quiero filtrar las publicaciones
-  Para encontrar rápido a la mascota que busco","1650","Filtrar por tipo muestra solo publicaciones de ese tipo","","Sat Nov 14 17:42:01 UTC 2026","passed","Sat Nov 14 17:42:02 UTC 2026","","Búsqueda de mascotas","Filtrar por tipo muestra solo publicaciones de ese tipo",""
-"  Como persona que quiere adoptar o ayudar
-  Quiero filtrar las publicaciones
-  Para encontrar rápido a la mascota que busco","1731","Filtrar por tipo muestra solo publicaciones de ese tipo","","Sat Nov 14 17:41:57 UTC 2026","passed","Sat Nov 14 17:41:59 UTC 2026","","Búsqueda de mascotas","Filtrar por tipo muestra solo publicaciones de ese tipo",""
-"  Como responsable de Querencia
-  Quiero que las páginas privadas pidan iniciar sesión
-  Para proteger los datos de las personas y las asociaciones","863","sitemap.xml lista las páginas públicas","","Sat Nov 14 17:42:50 UTC 2026","passed","Sat Nov 14 17:42:50 UTC 2026","","Seguridad y acceso","sitemap.xml lista las páginas públicas",""
-"  Como persona que quiere adoptar o ayudar
-  Quiero filtrar las publicaciones
-  Para encontrar rápido a la mascota que busco","1531","Filtrar por tipo muestra solo publicaciones de ese tipo","","Sat Nov 14 17:41:59 UTC 2026","passed","Sat Nov 14 17:42:01 UTC 2026","","Búsqueda de mascotas","Filtrar por tipo muestra solo publicaciones de ese tipo",""
-"  Como persona que entra desde el celular (la mayoría de las visitas)
-  Quiero que Querencia se adapte a la pantalla
-  Para poder navegar sin hacer zoom ni desplazarme hacia los costados","1544","La ficha de una mascota se ve completa en el celular","","Sat Nov 14 17:42:40 UTC 2026","passed","Sat Nov 14 17:42:41 UTC 2026","","Uso desde el celular","La ficha de una mascota se ve completa en el celular",""
 "  Como usuario registrado
   Quiero ingresar con mi correo y contraseña
-  Para publicar, postularme y seguir mis adopciones","5897","La cuenta de prueba inicia y cierra sesión","","Sat Nov 14 17:42:13 UTC 2026","passed","Sat Nov 14 17:42:19 UTC 2026","","Inicio de sesión","La cuenta de prueba inicia y cierra sesión",""
-"  Como persona que entra desde el celular (la mayoría de las visitas)
-  Quiero que Querencia se adapte a la pantalla
-  Para poder navegar sin hacer zoom ni desplazarme hacia los costados","1031","Las páginas no se desbordan hacia los costados","","Sat Nov 14 17:42:37 UTC 2026","passed","Sat Nov 14 17:42:38 UTC 2026","","Uso desde el celular","Las páginas no se desbordan hacia los costados",""
-"  Como persona que entra desde el celular (la mayoría de las visitas)
-  Quiero que Querencia se adapte a la pantalla
-  Para poder navegar sin hacer zoom ni desplazarme hacia los costados","2189","El menú se abre con el botón de hamburguesa","","Sat Nov 14 17:42:32 UTC 2026","passed","Sat Nov 14 17:42:34 UTC 2026","","Uso desde el celular","El menú se abre con el botón de hamburguesa",""
-"  Como visitante de Querencia
-  Quiero recorrer las secciones principales sin iniciar sesión
-  Para conocer a las mascotas y a las asociaciones","1914","El menú principal lleva a cada sección","","Sat Nov 14 17:42:21 UTC 2026","passed","Sat Nov 14 17:42:23 UTC 2026","","Navegación pública","El menú principal lleva a cada sección",""
+  Para publicar, postularme y seguir mis adopciones","1632","El formulario de ingreso muestra sus campos","","Sun Nov 15 18:32:05 UTC 2026","passed","Sun Nov 15 18:32:07 UTC 2026","","Inicio de sesión","El formulario de ingreso muestra sus campos",""
 "  Como responsable de Querencia
   Quiero que las páginas privadas pidan iniciar sesión
-  Para proteger los datos de las personas y las asociaciones","1270","Las páginas privadas piden iniciar sesión","","Sat Nov 14 17:42:43 UTC 2026","passed","Sat Nov 14 17:42:44 UTC 2026","","Seguridad y acceso","Las páginas privadas piden iniciar sesión",""
+  Para proteger los datos de las personas y las asociaciones","1433","Las páginas privadas piden iniciar sesión","","Sun Nov 15 18:32:46 UTC 2026","passed","Sun Nov 15 18:32:47 UTC 2026","","Seguridad y acceso","Las páginas privadas piden iniciar sesión",""
 "  Como usuario registrado
   Quiero ingresar con mi correo y contraseña
-  Para publicar, postularme y seguir mis adopciones","1148","El formulario de ingreso muestra sus campos","","Sat Nov 14 17:42:07 UTC 2026","passed","Sat Nov 14 17:42:09 UTC 2026","","Inicio de sesión","El formulario de ingreso muestra sus campos",""
-"  Como visitante de Querencia
-  Quiero recorrer las secciones principales sin iniciar sesión
-  Para conocer a las mascotas y a las asociaciones","1887","Las páginas legales están disponibles desde el pie","","Sat Nov 14 17:42:29 UTC 2026","passed","Sat Nov 14 17:42:31 UTC 2026","","Navegación pública","Las páginas legales están disponibles desde el pie",""
-"  Como persona que quiere adoptar o ayudar
-  Quiero filtrar las publicaciones
-  Para encontrar rápido a la mascota que busco","1639","Filtrar por tipo muestra solo publicaciones de ese tipo","","Sat Nov 14 17:42:02 UTC 2026","passed","Sat Nov 14 17:42:04 UTC 2026","","Búsqueda de mascotas","Filtrar por tipo muestra solo publicaciones de ese tipo",""
-"  Como persona que entra desde el celular (la mayoría de las visitas)
-  Quiero que Querencia se adapte a la pantalla
-  Para poder navegar sin hacer zoom ni desplazarme hacia los costados","1246","Las páginas no se desbordan hacia los costados","","Sat Nov 14 17:42:38 UTC 2026","passed","Sat Nov 14 17:42:39 UTC 2026","","Uso desde el celular","Las páginas no se desbordan hacia los costados",""
-"  Como responsable de Querencia
-  Quiero que las páginas privadas pidan iniciar sesión
-  Para proteger los datos de las personas y las asociaciones","1246","Las páginas privadas piden iniciar sesión","","Sat Nov 14 17:42:46 UTC 2026","passed","Sat Nov 14 17:42:47 UTC 2026","","Seguridad y acceso","Las páginas privadas piden iniciar sesión",""
-"  Como responsable de Querencia
-  Quiero que las páginas privadas pidan iniciar sesión
-  Para proteger los datos de las personas y las asociaciones","1189","Las páginas privadas piden iniciar sesión","","Sat Nov 14 17:42:44 UTC 2026","passed","Sat Nov 14 17:42:45 UTC 2026","","Seguridad y acceso","Las páginas privadas piden iniciar sesión",""
-"  Como visitante de Querencia
-  Quiero recorrer las secciones principales sin iniciar sesión
-  Para conocer a las mascotas y a las asociaciones","1019","Una dirección inexistente muestra la página de error de Querencia","","Sat Nov 14 17:42:31 UTC 2026","passed","Sat Nov 14 17:42:32 UTC 2026","","Navegación pública","Una dirección inexistente muestra la página de error de Querencia",""
-"  Como persona que entra desde el celular (la mayoría de las visitas)
-  Quiero que Querencia se adapte a la pantalla
-  Para poder navegar sin hacer zoom ni desplazarme hacia los costados","1478","Las páginas no se desbordan hacia los costados","","Sat Nov 14 17:42:34 UTC 2026","passed","Sat Nov 14 17:42:35 UTC 2026","","Uso desde el celular","Las páginas no se desbordan hacia los costados",""
-"  Como persona que entra desde el celular (la mayoría de las visitas)
-  Quiero que Querencia se adapte a la pantalla
-  Para poder navegar sin hacer zoom ni desplazarme hacia los costados","1063","Las páginas no se desbordan hacia los costados","","Sat Nov 14 17:42:39 UTC 2026","passed","Sat Nov 14 17:42:40 UTC 2026","","Uso desde el celular","Las páginas no se desbordan hacia los costados",""
-"  Como persona que quiere adoptar o ayudar
-  Quiero filtrar las publicaciones
-  Para encontrar rápido a la mascota que busco","1690","Abrir una publicación muestra su ficha completa","","Sat Nov 14 17:42:06 UTC 2026","passed","Sat Nov 14 17:42:07 UTC 2026","","Búsqueda de mascotas","Abrir una publicación muestra su ficha completa",""
-"  Como responsable de Querencia
-  Quiero que las páginas privadas pidan iniciar sesión
-  Para proteger los datos de las personas y las asociaciones","1202","Las páginas privadas piden iniciar sesión","","Sat Nov 14 17:42:47 UTC 2026","passed","Sat Nov 14 17:42:49 UTC 2026","","Seguridad y acceso","Las páginas privadas piden iniciar sesión",""
-"  Como persona que quiere adoptar o ayudar
-  Quiero filtrar las publicaciones
-  Para encontrar rápido a la mascota que busco","11501","El listado muestra publicaciones","","Sat Nov 14 17:41:46 UTC 2026","passed","Sat Nov 14 17:41:57 UTC 2026","","Búsqueda de mascotas","El listado muestra publicaciones",""
-"  Como persona que entra desde el celular (la mayoría de las visitas)
-  Quiero que Querencia se adapte a la pantalla
-  Para poder navegar sin hacer zoom ni desplazarme hacia los costados","1053","Las páginas no se desbordan hacia los costados","","Sat Nov 14 17:42:35 UTC 2026","passed","Sat Nov 14 17:42:37 UTC 2026","","Uso desde el celular","Las páginas no se desbordan hacia los costados",""
-"  Como visitante de Querencia
-  Quiero recorrer las secciones principales sin iniciar sesión
-  Para conocer a las mascotas y a las asociaciones","2034","El menú principal lleva a cada sección","","Sat Nov 14 17:42:25 UTC 2026","passed","Sat Nov 14 17:42:27 UTC 2026","","Navegación pública","El menú principal lleva a cada sección",""
+  Para publicar, postularme y seguir mis adopciones","5145","Con credenciales incorrectas se muestra un error","","Sun Nov 15 18:32:07 UTC 2026","passed","Sun Nov 15 18:32:12 UTC 2026","","Inicio de sesión","Con credenciales incorrectas se muestra un error",""
 "  Como usuario registrado
   Quiero ingresar con mi correo y contraseña
-  Para publicar, postularme y seguir mis adopciones","4772","Con credenciales incorrectas se muestra un error","","Sat Nov 14 17:42:09 UTC 2026","passed","Sat Nov 14 17:42:13 UTC 2026","","Inicio de sesión","Con credenciales incorrectas se muestra un error",""
-"  Como responsable de Querencia
-  Quiero que las páginas privadas pidan iniciar sesión
-  Para proteger los datos de las personas y las asociaciones","1159","Las páginas privadas piden iniciar sesión","","Sat Nov 14 17:42:45 UTC 2026","passed","Sat Nov 14 17:42:46 UTC 2026","","Seguridad y acceso","Las páginas privadas piden iniciar sesión",""
+  Para publicar, postularme y seguir mis adopciones","6760","La cuenta de prueba inicia y cierra sesión","","Sun Nov 15 18:32:12 UTC 2026","passed","Sun Nov 15 18:32:19 UTC 2026","","Inicio de sesión","La cuenta de prueba inicia y cierra sesión",""
+"  Como persona que entra desde el celular (la mayoría de las visitas)
+  Quiero que Querencia se adapte a la pantalla
+  Para poder navegar sin hacer zoom ni desplazarme hacia los costados","1358","Las páginas no se desbordan hacia los costados","","Sun Nov 15 18:32:41 UTC 2026","passed","Sun Nov 15 18:32:43 UTC 2026","","Uso desde el celular","Las páginas no se desbordan hacia los costados",""
 "  Como visitante de Querencia
   Quiero recorrer las secciones principales sin iniciar sesión
-  Para conocer a las mascotas y a las asociaciones","1864","Las páginas legales están disponibles desde el pie","","Sat Nov 14 17:42:27 UTC 2026","passed","Sat Nov 14 17:42:29 UTC 2026","","Navegación pública","Las páginas legales están disponibles desde el pie",""
+  Para conocer a las mascotas y a las asociaciones","2564","El menú principal lleva a cada sección","","Sun Nov 15 18:32:23 UTC 2026","passed","Sun Nov 15 18:32:26 UTC 2026","","Navegación pública","El menú principal lleva a cada sección",""
 "  Como responsable de Querencia
   Quiero que las páginas privadas pidan iniciar sesión
-  Para proteger los datos de las personas y las asociaciones","932","robots.txt le pide a los buscadores no indexar la administración","","Sat Nov 14 17:42:49 UTC 2026","passed","Sat Nov 14 17:42:50 UTC 2026","","Seguridad y acceso","robots.txt le pide a los buscadores no indexar la administración",""
+  Para proteger los datos de las personas y las asociaciones","1431","Las páginas privadas piden iniciar sesión","","Sun Nov 15 18:32:49 UTC 2026","passed","Sun Nov 15 18:32:50 UTC 2026","","Seguridad y acceso","Las páginas privadas piden iniciar sesión",""
+"  Como responsable de Querencia
+  Quiero que las páginas privadas pidan iniciar sesión
+  Para proteger los datos de las personas y las asociaciones","1956","El sitio publicado redirige de http a https","","Sun Nov 15 18:32:57 UTC 2026","passed","Sun Nov 15 18:32:59 UTC 2026","","Seguridad y acceso","El sitio publicado redirige de http a https",""
+"  Como responsable de Querencia
+  Quiero que las páginas privadas pidan iniciar sesión
+  Para proteger los datos de las personas y las asociaciones","1441","Las páginas privadas piden iniciar sesión","","Sun Nov 15 18:32:47 UTC 2026","passed","Sun Nov 15 18:32:49 UTC 2026","","Seguridad y acceso","Las páginas privadas piden iniciar sesión",""
+"  Como persona que quiere adoptar o ayudar
+  Quiero filtrar las publicaciones
+  Para encontrar rápido a la mascota que busco","2341","Filtrar por tipo muestra solo publicaciones de ese tipo","","Sun Nov 15 18:31:57 UTC 2026","passed","Sun Nov 15 18:31:59 UTC 2026","","Búsqueda de mascotas","Filtrar por tipo muestra solo publicaciones de ese tipo",""
+"  Como persona que entra desde el celular (la mayoría de las visitas)
+  Quiero que Querencia se adapte a la pantalla
+  Para poder navegar sin hacer zoom ni desplazarme hacia los costados","1925","La ficha de una mascota se ve completa en el celular","","Sun Nov 15 18:32:44 UTC 2026","passed","Sun Nov 15 18:32:46 UTC 2026","","Uso desde el celular","La ficha de una mascota se ve completa en el celular",""
+"  Como persona que entra desde el celular (la mayoría de las visitas)
+  Quiero que Querencia se adapte a la pantalla
+  Para poder navegar sin hacer zoom ni desplazarme hacia los costados","1816","Las páginas no se desbordan hacia los costados","","Sun Nov 15 18:32:37 UTC 2026","passed","Sun Nov 15 18:32:39 UTC 2026","","Uso desde el celular","Las páginas no se desbordan hacia los costados",""
+"  Como responsable de Querencia
+  Quiero que las páginas privadas pidan iniciar sesión
+  Para proteger los datos de las personas y las asociaciones","1398","Las páginas privadas piden iniciar sesión","","Sun Nov 15 18:32:53 UTC 2026","passed","Sun Nov 15 18:32:54 UTC 2026","","Seguridad y acceso","Las páginas privadas piden iniciar sesión",""
+"  Como responsable de Querencia
+  Quiero que las páginas privadas pidan iniciar sesión
+  Para proteger los datos de las personas y las asociaciones","1370","Las páginas privadas piden iniciar sesión","","Sun Nov 15 18:32:50 UTC 2026","passed","Sun Nov 15 18:32:52 UTC 2026","","Seguridad y acceso","Las páginas privadas piden iniciar sesión",""
+"  Como visitante de Querencia
+  Quiero recorrer las secciones principales sin iniciar sesión
+  Para conocer a las mascotas y a las asociaciones","2132","Las páginas legales están disponibles desde el pie","","Sun Nov 15 18:32:29 UTC 2026","passed","Sun Nov 15 18:32:31 UTC 2026","","Navegación pública","Las páginas legales están disponibles desde el pie",""
+"  Como responsable de Querencia
+  Quiero que las páginas privadas pidan iniciar sesión
+  Para proteger los datos de las personas y las asociaciones","1095","sitemap.xml lista las páginas públicas","","Sun Nov 15 18:32:56 UTC 2026","passed","Sun Nov 15 18:32:57 UTC 2026","","Seguridad y acceso","sitemap.xml lista las páginas públicas",""
+"  Como persona que quiere adoptar o ayudar
+  Quiero filtrar las publicaciones
+  Para encontrar rápido a la mascota que busco","8176","El listado muestra publicaciones","","Sun Nov 15 18:31:44 UTC 2026","passed","Sun Nov 15 18:31:52 UTC 2026","","Búsqueda de mascotas","El listado muestra publicaciones",""
+"  Como persona que entra desde el celular (la mayoría de las visitas)
+  Quiero que Querencia se adapte a la pantalla
+  Para poder navegar sin hacer zoom ni desplazarme hacia los costados","2127","El menú se abre con el botón de hamburguesa","","Sun Nov 15 18:32:35 UTC 2026","passed","Sun Nov 15 18:32:37 UTC 2026","","Uso desde el celular","El menú se abre con el botón de hamburguesa",""
+"  Como visitante de Querencia
+  Quiero recorrer las secciones principales sin iniciar sesión
+  Para conocer a las mascotas y a las asociaciones","1291","Una dirección inexistente muestra la página de error de Querencia","","Sun Nov 15 18:32:33 UTC 2026","passed","Sun Nov 15 18:32:35 UTC 2026","","Navegación pública","Una dirección inexistente muestra la página de error de Querencia",""
+"  Como visitante de Querencia
+  Quiero recorrer las secciones principales sin iniciar sesión
+  Para conocer a las mascotas y a las asociaciones","2028","La página de inicio carga con la portada y las mascotas recientes","","Sun Nov 15 18:32:19 UTC 2026","passed","Sun Nov 15 18:32:21 UTC 2026","","Navegación pública","La página de inicio carga con la portada y las mascotas recientes",""
+"  Como visitante de Querencia
+  Quiero recorrer las secciones principales sin iniciar sesión
+  Para conocer a las mascotas y a las asociaciones","2531","Las páginas legales están disponibles desde el pie","","Sun Nov 15 18:32:31 UTC 2026","passed","Sun Nov 15 18:32:33 UTC 2026","","Navegación pública","Las páginas legales están disponibles desde el pie",""
+"  Como persona que quiere adoptar o ayudar
+  Quiero filtrar las publicaciones
+  Para encontrar rápido a la mascota que busco","2122","Filtrar por tipo muestra solo publicaciones de ese tipo","","Sun Nov 15 18:31:54 UTC 2026","passed","Sun Nov 15 18:31:57 UTC 2026","","Búsqueda de mascotas","Filtrar por tipo muestra solo publicaciones de ese tipo",""
+"  Como persona que entra desde el celular (la mayoría de las visitas)
+  Quiero que Querencia se adapte a la pantalla
+  Para poder navegar sin hacer zoom ni desplazarme hacia los costados","1358","Las páginas no se desbordan hacia los costados","","Sun Nov 15 18:32:39 UTC 2026","passed","Sun Nov 15 18:32:40 UTC 2026","","Uso desde el celular","Las páginas no se desbordan hacia los costados",""
+"  Como persona que quiere adoptar o ayudar
+  Quiero filtrar las publicaciones
+  Para encontrar rápido a la mascota que busco","2259","Filtrar por tipo muestra solo publicaciones de ese tipo","","Sun Nov 15 18:31:59 UTC 2026","passed","Sun Nov 15 18:32:01 UTC 2026","","Búsqueda de mascotas","Filtrar por tipo muestra solo publicaciones de ese tipo",""
+"  Como responsable de Querencia
+  Quiero que las páginas privadas pidan iniciar sesión
+  Para proteger los datos de las personas y las asociaciones","1128","robots.txt le pide a los buscadores no indexar la administración","","Sun Nov 15 18:32:54 UTC 2026","passed","Sun Nov 15 18:32:56 UTC 2026","","Seguridad y acceso","robots.txt le pide a los buscadores no indexar la administración",""
+"  Como visitante de Querencia
+  Quiero recorrer las secciones principales sin iniciar sesión
+  Para conocer a las mascotas y a las asociaciones","2688","El menú principal lleva a cada sección","","Sun Nov 15 18:32:26 UTC 2026","passed","Sun Nov 15 18:32:29 UTC 2026","","Navegación pública","El menú principal lleva a cada sección",""
+"  Como responsable de Querencia
+  Quiero que las páginas privadas pidan iniciar sesión
+  Para proteger los datos de las personas y las asociaciones","1392","Las páginas privadas piden iniciar sesión","","Sun Nov 15 18:32:52 UTC 2026","passed","Sun Nov 15 18:32:53 UTC 2026","","Seguridad y acceso","Las páginas privadas piden iniciar sesión",""
+"  Como persona que quiere adoptar o ayudar
+  Quiero filtrar las publicaciones
+  Para encontrar rápido a la mascota que busco","2151","Buscar un nombre que no existe muestra el aviso sin resultados","","Sun Nov 15 18:32:01 UTC 2026","passed","Sun Nov 15 18:32:03 UTC 2026","","Búsqueda de mascotas","Buscar un nombre que no existe muestra el aviso sin resultados",""
+"  Como persona que quiere adoptar o ayudar
+  Quiero filtrar las publicaciones
+  Para encontrar rápido a la mascota que busco","2072","Abrir una publicación muestra su ficha completa","","Sun Nov 15 18:32:03 UTC 2026","passed","Sun Nov 15 18:32:05 UTC 2026","","Búsqueda de mascotas","Abrir una publicación muestra su ficha completa",""
+"  Como persona que entra desde el celular (la mayoría de las visitas)
+  Quiero que Querencia se adapte a la pantalla
+  Para poder navegar sin hacer zoom ni desplazarme hacia los costados","1312","Las páginas no se desbordan hacia los costados","","Sun Nov 15 18:32:40 UTC 2026","passed","Sun Nov 15 18:32:41 UTC 2026","","Uso desde el celular","Las páginas no se desbordan hacia los costados",""
+"  Como persona que quiere adoptar o ayudar
+  Quiero filtrar las publicaciones
+  Para encontrar rápido a la mascota que busco","2261","Filtrar por tipo muestra solo publicaciones de ese tipo","","Sun Nov 15 18:31:52 UTC 2026","passed","Sun Nov 15 18:31:54 UTC 2026","","Búsqueda de mascotas","Filtrar por tipo muestra solo publicaciones de ese tipo",""
+"  Como visitante de Querencia
+  Quiero recorrer las secciones principales sin iniciar sesión
+  Para conocer a las mascotas y a las asociaciones","2452","El menú principal lleva a cada sección","","Sun Nov 15 18:32:21 UTC 2026","passed","Sun Nov 15 18:32:23 UTC 2026","","Navegación pública","El menú principal lleva a cada sección",""
+"  Como persona que entra desde el celular (la mayoría de las visitas)
+  Quiero que Querencia se adapte a la pantalla
+  Para poder navegar sin hacer zoom ni desplazarme hacia los costados","1343","Las páginas no se desbordan hacia los costados","","Sun Nov 15 18:32:43 UTC 2026","passed","Sun Nov 15 18:32:44 UTC 2026","","Uso desde el celular","Las páginas no se desbordan hacia los costados",""
